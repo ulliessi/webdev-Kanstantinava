@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout</title>
+    <style>
+        /* Apply minimal styling for demonstration purposes */
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4; /* Light grey background for a modern look */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff; /* White background for the content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: right;
+    width: calc(50% - 20px); /* Responsive width with margin */
+    margin: 10px;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+header nav, footer ul {
+    text-align: center;
+}
+
+header nav a, footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px; /* Padding for clickable area */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+header nav a:hover, footer a:hover {
+    background-color: #555; /* Darker background on hover for better interaction */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+img {
+    float: right;
+    max-width: 400px;
+    margin: 10px;
+    border: 1px solid #ddd; /* Border for images */
+    padding: 5px; /* Spacing around images */
+    background: #fff; /* White background for images */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#holy_grail_layout">Holy Grail Layout</a>
+            <a href="#box_model">Box Model in CSS</a>
+            <a href="#clearfix_hack">Clearfix Hack</a>
+            <a href="#margin_collapse">Margin Collapse</a>
+            <a href="#problem">Problem with Holy Grail Layout</a>
+            <a href="#solutions">Modern Solutions</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 id="holy_grail_layout">The Holy Grail Layout</h1>
+        <p>The Holy Grail layout is a common web page structure with three columns: a main content area (center), and sidebars (left and right).</p>
+        <img src="https://cdn.matthewjamestaylor.com/titles/holy-grail-3-column-responsive-layout-diagram.png" alt="Holy Grail Layout" class="column">
+        <article>
+            <h2 id="box_model">Box Model in CSS</h2>
+            <p>The box model defines how elements are rendered on a web page. It consists of:</p>
+            <ul>
+                <li><strong>Content:</strong> The actual content (text, images) inside the element.</li>
+                <li><strong>Padding:</strong> Space between the content and the border.</li>
+                <li><strong>Border:</strong> A line around the padding and content.</li>
+                <li><strong>Margin:</strong> Space outside the border.</li>
+            </ul>
+            <img src="https://byby.dev/img/css-box-model.png" alt="Box Model" class="column">
+        </article>
+        <article>
+            <h2 id="clearfix_hack">Clearfix Hack</h2>
+            <p>When floating elements, their parent container may not expand to accommodate them. The clearfix hack ensures proper container height by adding an empty pseudo-element with <code>clear: both;</code>.</p>
+            <img src="code.png" alt="Clearfix Hack" class="column">
+        </article>
+        <article>
+            <h2 id="margin_collapse">Margin Collapse</h2>
+            <p>Vertical margins of adjacent elements can collapse into a single margin. Use <code>margin: auto;</code> for centering and negative margins for special effects.</p>
+            <img src="https://miro.medium.com/v2/resize:fit:535/1*irihT0essp7Rs2cqtHxyQw.png" alt="Margin Collapse" class="column">
+        </article>
+        <article>
+            <h2 id="problem">Problem with Holy Grail Layout</h2>
+            <p>The challenge was achieving equal-height columns with separate backgrounds and fixed-width sidebars. CSS limitations and browser inconsistencies made it tricky.</p>
+        </article>
+        <article>
+            <h2 id="solutions">Modern Solutions</h2>
+            <p>Today, we have robust solutions like Flexbox and CSS Grid Layout. They allow flexible, responsive Holy Grail layouts without workarounds.</p>
+        </article>
+    </div>
+    <footer>
+        <p>Student's Name: Kanstantinava Yuliya</p>
+        <p>Course Name: Web Development</p>
+        <p>Date: April 15, 2024</p>
+        <p>Day and Place of Document Creation: Monday, SB BSU</p>
+    </footer>
+</body>
+</html>
